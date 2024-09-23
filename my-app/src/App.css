@@ -1,0 +1,130 @@
+/* Grundlayout för appen */
+.App {
+  text-align: center;
+  background-color: #f4f4f9;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Logo-animering */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.App-logo:hover {
+  transform: scale(1.1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Header-styling */
+.App-header {
+  background-color: #1e1e24;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.App-link {
+  color: #61dafb;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.App-link:hover {
+  color: #21a1f1;
+}
+
+/* Stil för 'completed' todos */
+.completed {
+  color: lightgreen;
+  text-decoration: line-through;
+}
+
+/* Knapp-styling */
+button {
+  background-color: #61dafb;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #21a1f1;
+  box-shadow: 0 4px 15px rgba(33, 161, 241, 0.4);
+}
+
+button:active {
+  background-color: #1e90ff;
+}
+
+/* Todo-container */
+.todo-container {
+  background-color: #fff;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+/* Text-färg för rubriker */
+h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* För todo-description */
+p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsiv styling */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin);
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .todo-container {
+    width: 90%;
+  }
+}
